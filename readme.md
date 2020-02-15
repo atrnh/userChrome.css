@@ -1,3 +1,5 @@
-<h1 text-align="center">📼 userChrome.css</h1>
+<h1 align="center">
+  📼 userChrome.css <br>
+</h1>
 
 ![screenshot](userchrome.png)
