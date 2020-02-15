@@ -1,0 +1,115 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+	#TabsToolbar {
+		padding: 0 !important;
+		height: 28px !important;
+		background: white;
+    width: 100%;
+
+	}
+	
+	.tabbrowser-tab {
+		max-height: 28px !important;;
+	}
+	
+	#TabsToolbar > hbox, #TabsToolbar tab, #TabsToolbar stack {
+		height: inherit !important;
+	}
+	
+	#TabsToolbar .toolbar-items, #TabsToolbar-customization-target {
+		width: 100% !important;
+	}
+	
+	.tab-label {
+		font-family: 'Input' !important;
+		color: #00f !important;
+	}
+	
+	.tab-background {
+		color: white !important;
+	}
+	
+	.tab-line[multiselected], .tab-line[selected="true"] {
+		background: #00f !important;
+	}
+	
+	#tabbrowser-tabs:not([movingtab]) > .tabbrowser-arrowscrollbox > .tabbrowser-tab[beforeselected-visible]::after,
+	#tabbrowser-tabs[movingtab] > .tabbrowser-arrowscrollbox > .tabbrowser-tab[visuallyselected]::before,
+	.tabbrowser-tab[visuallyselected]::after,
+	.tabbrowser-tab::after, .tabbrowser-tab::before {
+		border-color: transparent !important;
+	}
+	
+	#nav-bar {
+		/*position: absolute !important;*/
+    /*top: calc(100vh - 30px);*/
+    height: 30px;
+    width: 100%;
+		box-shadow: none !important;
+		border: 0 !important;
+	}
+	
+	#PanelUI-button, #nav-bar-overflow-button, #page-action-buttons,
+	#forward-button, #back-button, .titlebar-spacer,
+	findbar toolbarbutton > image {
+		display: none !important;
+	}
+	
+	#nav-bar-customization-target {
+		width: 100% !important;
+		height: 30px !important;
+		background: white !important;
+		border-top: 1px solid #00f;
+	}
+	
+	#urlbar {
+		margin: 0 !important;
+		border: 0 !important;
+    font-family: 'Input' !important;
+		font-size: 12px !important;
+		background: white !important;
+	}
+	
+	#identity-box {
+		background: #dbdbff;
+	}
+	
+	findbar {
+		transform: translateY(-30px);
+		height: 21px;
+		background: #86e8b4 !important;
+		border-color: transparent !important;
+		padding-bottom: 1px;
+	}
+	
+	html|input.findbar-textbox:focus, html|input.findbar-textbox {
+		border: 0 !important;
+		background: 0 !important;
+    padding: 0 !important;
+		box-shadow: none !important;
+	}
+	
+	.findbar-container {
+		padding: 1px 0 0 0 !important;
+		height: 100% !important;
+	}
+	
+	.findbar-closebutton {
+		line-height: unset;
+		width: 10px !important;
+		text-align: center !important;
+		margin: 2px 2px 1px 2px !important;
+		background: rgba(255, 255, 255, 0.7) !important;
+		color: black;
+	}
+
+	.findbar-closebutton::after {
+		content: '✕';  /* ⟨⟩◂▸ */
+		margin: auto 7px !important;
+	}
+	
+	.findbar-button {
+		padding: 0 !important;
+	}
+}
